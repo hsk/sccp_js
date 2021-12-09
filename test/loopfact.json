@@ -1,0 +1,36 @@
+[
+  ["func","main",[],{
+    "enter1":[
+      ["const","v0",8],
+      ["id","value","v0"],
+      ["const","v1",1],
+      ["id","result","v1"],
+      ["id","v3","value"],
+      ["id","i","v3"],
+      ["jmp","for.cond.2"]
+    ],
+    "for.cond.2":[
+      ["id","v4","i"],
+      ["const","v5",0],
+      ["bin","v6","gt","v4","v5"],
+      ["br","v6","for.body.2","for.end.2"]
+    ],
+    "for.body.2":[
+      ["id","v7","result"],
+      ["id","v8","i"],
+      ["bin","v9","mul","v7","v8"],
+      ["id","result","v9"],
+      ["id","v10","i"],
+      ["const","v11",1],
+      ["bin","v12","sub","v10","v11"],
+      ["id","i","v12"],
+      ["jmp","for.cond.2"]
+    ],
+    "for.end.2":[
+      ["id","v13","result"],
+      ["print","v13"],
+      ["const","v14",0],
+      ["ret"]
+    ]
+  }]
+]
