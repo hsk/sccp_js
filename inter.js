@@ -34,6 +34,9 @@ function run(prog) {
             case "const":
                 env[c[1]]=c[2];
                 break;
+            case "id":
+                env[c[1]]=env[c[2]];
+                break;
             case "jmp":
                 lastlabel=label;
                 if (!(c[1] in cfg))
