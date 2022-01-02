@@ -8,7 +8,10 @@ all:
 	llc test/loopfact_.ll; gcc test/loopfact_.s; ./a.out    
 vicis:
 	git clone https://github.com/maekawatoshiki/vicis
-vparse: vicis
+vparse: vicis 2
 	cd vicis; cargo run --example parse ../test/loopfact_.ll
 vrun: vicis
 	cd vicis; cargo run --example interpreter ../test/loopfact_.ll
+clean:
+	rm -rf test/loopfact_.ll test/loopfact_.s a.out vicis
+	
