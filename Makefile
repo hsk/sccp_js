@@ -14,12 +14,12 @@ vicis:
 	git clone https://github.com/hsk/vicis
 vparse: vicis 2
 	cd vicis; cargo run --example parse ../test/loopfact_.ll
-vrun: vicis
+vrun: vicis 2
 	cd vicis; cargo run --example interpreter -- --load=/usr/lib/libffi-trampolines.dylib ../test/loopfact_.ll
 
 vparse3: vicis 3
 	cd vicis; cargo run --example parse ../test/loopfact_3.ll
-vrun3: vicis
+vrun3: vicis 3
 	cd vicis; cargo run --example interpreter -- --load=/usr/lib/libffi-trampolines.dylib ../test/loopfact_3.ll
 
 clean:
