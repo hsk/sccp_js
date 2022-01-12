@@ -23,4 +23,4 @@ vrun3: vicis 3
 	cd vicis; cargo run --example interpreter -- --load=/usr/lib/libffi-trampolines.dylib ../test/loopfact_3.ll
 
 clean:
-	rm -rf test/loopfact_.ll test/loopfact_.s a.out vicis
+	rm -rf test/loopfact_.ll test/loopfact_.s test/loopfact_3.ll test/loopfact_3.s a.out vicis
