@@ -58,6 +58,15 @@ function compfun(fun) {
                 let args = keys.map(k=>"[%"+c[2][k]+", %"+k+"]").join(", ");
                 console.log("  %"+c[1]+" = phi i32 "+args);
                 break;
+            case "alloca":
+                console.log("  %"+c[1]+" = alloca i32");
+                break;
+            case "store":
+                console.log("  store i32 %"+c[2]+", i32* %"+c[1]);
+                break;
+            case "load":
+                console.log("  %"+c[1]+" = load i32, i32* %"+c[2]);
+                break;
             default:
                 throw ("unknown instruction "+JSON.stringify(c));
             }
